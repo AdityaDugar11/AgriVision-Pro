@@ -4,11 +4,12 @@ Uses Ollama Qwen3-coder for FREE disease detection
 No Claude API costs! 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
 """
 
-import requests
-import json
+import os
+from dotenv import load_dotenv
 
-# FREE API - No cost, no limits for basic use
-HF_API_TOKEN = "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"  # Get from huggingface.co
+load_dotenv()
+
+HF_API_TOKEN = os.getenv("HF_API_TOKEN", "")
 HF_API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-large"
 
 def analyze_crop_disease(image_path, crop_name, location):

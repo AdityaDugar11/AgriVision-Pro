@@ -13,8 +13,8 @@ load_dotenv()
 # TWILIO CONFIGURATION (YOUR CREDENTIALS)
 # ============================================================================
 
-TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "ACab88cd142277731591c4619f866174f5")
-TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "YOUR_NEW_AUTH_TOKEN_HERE")  # UPDATE THIS!
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID", "")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN", "")  # UPDATE THIS!
 TWILIO_WHATSAPP_NUMBER = os.getenv("TWILIO_WHATSAPP_NUMBER", "whatsapp:+14155238886")
 
 print(f"Twilio Account: {TWILIO_ACCOUNT_SID[:10]}...")
