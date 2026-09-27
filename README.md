@@ -11,7 +11,7 @@
 
 ## 📋 Overview
 
-**AgriVision Pro** is an AI-powered agricultural advisory system that helps Indian farmers detect crop diseases in real-time using computer vision and natural language processing. Farmers can upload crop photos via WhatsApp and receive instant disease diagnosis with treatment recommendations in their local language.
+**AgriVision Pro** is an AI-powered agricultural advisory system that simulates crop disease detection in real-time using natural language processing. Farmers can upload crop photos (which are saved but not analyzed by vision models) via WhatsApp and receive instant simulated disease diagnosis with treatment recommendations in their local language.
 
 ### The Problem
 - **₹20,000 Crore** annual agricultural losses in India
@@ -20,23 +20,28 @@
 - Disease experts take **days** to diagnose; crops need help in **hours**
 - Agricultural solutions available only in **English**
 
-### Our Solution
-AgriVision Pro leverages free AI technology (Hugging Face) to provide:
-- ✅ **Real-time diagnosis** (< 30 seconds)
-- ✅ **95%+ accuracy** for Indian crop diseases
-- ✅ **Multilingual support** (5 Indian languages)
-- ✅ **WhatsApp integration** (no app download needed)
-- ✅ **Affordable** (₹50/month vs ₹500+ expert consultation)
-- ✅ **24/7 availability** (anytime, anywhere)
+### Prototype / Hackathon Project
+
+**Disclaimer**: This project is a prototype / hackathon project and does not perform actual image-based crop disease detection.
+
+- **Dataset**: None.
+- **Model actually used**: `google/flan-t5-large` (a text-to-text generation LLM). No computer vision model is used.
+- **Evaluation methodology**: None.
+- **Measured accuracy**: N/A (0 test samples).
+- **Number of test samples**: 0.
+- **Actual supported crops**: Any crop name provided in the text input.
+- **Whether WhatsApp integration actually works**: Yes, using the Twilio API, but requires the user to provide their own valid Twilio credentials.
+- **Whether deployment is live**: No, the live URL on Railway is currently inactive.
+- **What is simulated**: Image analysis is fully simulated. The uploaded image is saved but never analyzed. The model hallucinates a disease diagnosis and treatment purely based on the provided text inputs (crop name and location).
 
 ---
 
 ## 🎯 Key Features
 
 ### 1. AI Disease Detection
-- Computer vision analysis of crop images
+- Text-based simulated analysis of crop diseases
 - Identifies diseases with confidence scores
-- Supports major Indian crops: Rice, Wheat, Tomato, Cotton, Potato, etc.
+- Any crop name provided via text
 
 ### 2. Multilingual Support
 - **Hindi** (हिंदी)
@@ -400,7 +405,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Project Type:** Innovation & Entrepreneurship  
 **Duration:** 7.5-hour hackathon + ongoing development  
-**Status:** Production-ready MVP
+**Status:** Prototype / Hackathon Project
 
 ---
 
@@ -409,7 +414,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Lines of Code:** 2,000+
 - **Database Tables:** 3
 - **API Endpoints:** 6+
-- **Supported Crops:** 10+
+- **Supported Crops:** Any (text-based generation)
 - **Supported Languages:** 5
 - **Deployment Time:** < 5 minutes
 - **Database Size:** Scalable (PostgreSQL)
@@ -446,7 +451,7 @@ curl http://localhost:8000/health
 - ✅ Multilingual support
 - ✅ PostgreSQL database
 - ✅ Cloud deployment
-- ✅ Production-ready
+- ✅ Prototype demonstration
 
 ### Future Features
 - Mobile app (React Native)
